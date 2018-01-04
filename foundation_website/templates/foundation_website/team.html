@@ -1,0 +1,83 @@
+{% load static %}
+
+<html>
+
+	<head>
+		<title>Foundation</title>
+		<link rel="shortcut icon" type="image/png" href="{% static 'foundation_website/images/favicon.png' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation_website/css/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation_website/css/team.css' %}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+
+	<body>
+
+		<div class='header-container'>
+
+			<div class="logo">
+				<img src="{% static 'foundation_website/images/logo.png' %}", width="175px", height="35px">
+			</div>
+
+			<div class='projects' id='myTopnav'>
+				<b>
+				<a class='project-item' href='/projects/medici'>Medici</a>
+				<!--
+				<a class='project-item'>•</a>
+				<a class='project-item' href='#'>Cubesat</a>
+				<a class='project-item'>•</a>
+				<a class='project-item' href='#'>Makerspace</a>
+				<a class='project-item'>•</a>
+				<a class='project-item' href='#'>Drones</a>
+				-->
+				</b>
+			</div>
+
+			<div class="video-container">
+				<!--
+				<video preload="true" autoplay="autoplay" loop="loop" volume="0" poster="images/video_placeholder.png" width="100%">
+							<source src="video/foundation.ogv" type="video/ogg">
+							<source src="video/foundation.webm" type="video/webm">
+							<source src="video/foundation.mp4" type="video/mp4">
+				</video>
+				-->
+			</div>
+
+			<div class='mission-statement'>
+				<div class='team'>
+				<div class="img-with-text">
+				 <a href="https://www.linkedin.com/in/luka-anicin/" target="_blank"><img src="{% static 'foundation_website/images/luka_new.png' %}" alt=""  /></a>
+				 <p>Luka Anicin <br> <span class='position-text'> Data Science <span></p>
+				</div>
+
+				<div class="img-with-text">
+				 <a href="https://www.linkedin.com/in/knezevic-vanja/" target="_blank"><img src="{% static 'foundation_website/images/vanja_new.jpg' %}" alt=""  /></a>
+				 <p>Vanja Knezevic <br> <span class='position-text'> Product Development <span></p>
+				</div>
+
+				<div class="img-with-text">
+				 <a href="https://www.linkedin.com/in/vladimir-nikoli%C4%87-372921127/" target="_blank"><img src="{% static 'foundation_website/images/banjo_new.jpg' %}" alt=""  /></a>
+				 <p>Vladimir Nikolic <br> <span class='position-text'> DevOps <span></p>
+				</div>
+
+				<div class="img-with-text">
+				 <a href="https://www.linkedin.com/in/sara-kne%C5%BEevi%C4%87-918b08145/" target="_blank"><img src="{% static 'foundation_website/images/sara.jpg' %}" alt=""  /></a>
+				 <p>Sara Knezevic <br> <span class='position-text'> Data Science <span></p>
+				</div>
+				</div>
+			</div>
+
+			<div class='menu-team'>
+				<b>
+					<span class='menu-pad'><a href='/'><button class="button-menu">Home</button></a></span>
+				</b>
+			</div>
+
+			<div id='footer'>
+				<span class='footer-button'><a href='/'>Foundation&copy; 2017</a></span>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

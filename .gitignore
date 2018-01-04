@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+foundation_server/nginx.conf
+foundation_server/settings.py
+foundation_server/uwsgi.ini
