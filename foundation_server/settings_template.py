@@ -23,9 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm3qe7_wsswpg0pev8&@pu7bxhjo3^qk-v5$2ane+2*tbcyp9yg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get('DJANGO_DEBUG'):
+    print("Debug is enabled.")
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = [ '127.0.0.1', '<domain_name>' ]
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', '[::1]', '<domain_name>' ]
 
 
 # Application definition
@@ -126,8 +130,13 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = '<static_dir>'
 
-# HTTPS
+# Misc
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# HTTPS
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
