@@ -26,10 +26,10 @@ SECRET_KEY = 'm3qe7_wsswpg0pev8&@pu7bxhjo3^qk-v5$2ane+2*tbcyp9yg'
 if os.environ.get('DJANGO_DEBUG'):
     print("Debug is enabled.")
     DEBUG = True
+    ALLOWED_HOSTS = [ '*' ]
 else:
     DEBUG = False
-
-ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', '[::1]', '<domain_name>' ]
+    ALLOWED_HOSTS = [ '<domain_name>' ]
 
 
 # Application definition
@@ -140,3 +140,6 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
