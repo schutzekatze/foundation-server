@@ -2,7 +2,7 @@
 
 PROJECT_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 MAIN_APP=foundation_server
-DOMAIN_NAME=fundamentum-futuri.com
+DOMAIN_NAME=third-foundation.com
 STATIC_DIR=/srv/http/$MAIN_APP/static
 MEDIA_DIR=/srv/http/$MAIN_APP/media
 
